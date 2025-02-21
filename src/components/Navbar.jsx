@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  useEffect(() => {
+    // Prevent multiple script additions
+    if (!document.querySelector("script[src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit']")) {
+      const addScript = document.createElement("script");
+      addScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.body.appendChild(addScript);
+    }
+
+    // Prevent re-initialization
+    if (!window.googleTranslateElementInit) {
+      window.googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: "en", includedLanguages: "hi,mr,ta,te,bn,gu,pa,kn,ml,en", layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE },
+          "google_translate_element"
+        );
+      };
+    }
+  }, []);
   return (
     <>
       <div className="h-[10vh] bg-green-700 w-full flex  absolute">
@@ -29,7 +47,7 @@ function Navbar() {
               Weed & Crop Information
               </li>
             </Link>
-            <Link to="/home">
+            <Link to="/herbicideguide">
               <li className="">
               Herbicide Guide
               </li>
@@ -51,6 +69,7 @@ function Navbar() {
               </li>
             </Link>
           </ul>
+          <div id="google_translate_element" className="w-[12%] flex justify-center"></div>
         </div>
       </div>
     </>
