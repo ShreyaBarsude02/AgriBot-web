@@ -24,8 +24,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/weed-herbicide-guide" element={<HerbicideGuide />} />
-            <Route path="/herbicide-info" element={<HerbicideInfo />} />
-            <Route path="/weed-info" element={<WeedInfo />} />
+            <Route path="/weed-herbicide-guide/herbicide-info" element={<HerbicideInfo />} />
+            <Route path="/weed-herbicide-guide//weed-info" element={<WeedInfo />} />
             <Route path="/liveprices" element={<LivePrices />} />
           </Routes>
         </Router>
