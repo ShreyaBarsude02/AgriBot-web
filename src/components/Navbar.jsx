@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Install lucide-react if not installed
+import { Menu, X } from "lucide-react";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,21 +13,23 @@ function Navbar() {
       document.body.appendChild(addScript);
     }
 
-    // Prevent re-initialization
-    if (!window.googleTranslateElementInit) {
-      window.googleTranslateElementInit = () => {
-        new window.google.translate.TranslateElement(
-          { pageLanguage: "en", includedLanguages: "hi,mr,ta,te,bn,gu,pa,kn,ml,en", layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE },
-          "google_translate_element"
-        );
-      };
-    }
+    // Initialize Google Translate
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          includedLanguages: "hi,mr,ta,te,bn,gu,pa,kn,ml,en",
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        "google_translate_element"
+      );
+    };
   }, []);
 
   return (
-    <nav className="bg-green-700 w-full fixed top-0 shadow-md">
+    <nav className="bg-[#123524] w-full fixed top-0 shadow-md">
       <div className="flex items-center justify-between px-6 py-2">
-        {/* Logo Section */}
+        {/* Logo */}
         <div className="flex items-center">
           <img src="/logo.png" alt="Logo" className="w-[70px] h-[70px]" />
         </div>
@@ -44,8 +46,10 @@ function Navbar() {
           <Link to="/home"><li className="hover:text-yellow-300 transition">Support</li></Link>
         </ul>
 
-        {/* Google Translate */}
-        <div id="google_translate_element" className="hidden md:flex"></div>
+        {/* Google Translate Element - Fixed */}
+        <div className="hidden md:flex w-[120px] h-[30px] overflow-hidden border border-gray-300 rounded bg-white">
+          <div id="google_translate_element"></div>
+        </div>
 
         {/* Mobile Menu Button */}
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-white">
