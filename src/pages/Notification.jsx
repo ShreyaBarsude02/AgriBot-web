@@ -1,5 +1,6 @@
 // src/components/Notification.jsx
 import React, { useEffect, useState } from 'react';
+import '/src/assets/Notification.css'; // Ensure this path is correct
 
 const Notification = () => {
   const [data, setData] = useState([]);
@@ -22,31 +23,34 @@ const Notification = () => {
   }, []);
 
   return (
-    <div className="p-4">
-      {data.map((item, index) => (
-        <div key={index} className="bg-white shadow-md rounded-lg p-6 mb-4">
-          <h2 className="text-xl font-bold mb-2">{item['Service Name']}</h2>
-          <p className="text-gray-700 mb-2">{item.Description}</p>
-          <p className="text-gray-500 mb-2">Maturity Level: {item['Maturity Level']}</p>
-          <p className="text-gray-500 mb-2">Star Rating: {item['Star Rating']}</p>
-          <a
-            href={item['Service Link']}
-            className="text-blue-500 hover:underline mr-4"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Service Link
-          </a>
-          <a
-            href={item['More Info Link']}
-            className="text-blue-500 hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            More Info
-          </a>
+    <div className="notification-container ">
+      <div className="notification-box ">
+        <h1 className="notification-heading ">Notifications</h1>
+        <div className="notification-content">
+          {data.map((item, index) => (
+            <div key={index} className="notification-item">
+              <h2>{item['Service Name']}</h2>
+              <p>{item.Description}</p>
+              <p>Maturity Level: {item['Maturity Level']}</p>
+              <p>Star Rating: {item['Star Rating']}</p>
+              <a
+                href={item['Service Link']}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Service Link
+              </a>
+              <a
+                href={item['More Info Link']}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                More Info
+              </a>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };

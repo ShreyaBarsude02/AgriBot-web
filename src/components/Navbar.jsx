@@ -23,7 +23,9 @@ function Navbar() {
   return (
     <>
       <div className="h-[10vh] bg-green-700 w-full flex  absolute">
-        <div className="w-[12%] bg-yellow-50">logo</div>
+        <div className="w-[12%] bg-yellow-50">
+          <img src="public\logo.png" className="pl-3 w-[5vw] h-[4.5vw]" alt="logo" />
+        </div>
         <div className="flex text-amber-500 w-[88%] font-semibold">
           <ul className="flex space-x-12 justify-center items-center w-full ">
             <Link to="/home">
