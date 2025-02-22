@@ -47,7 +47,7 @@ function Navbar() {
               Weed & Crop Information
               </li>
             </Link>
-            <Link to="/herbicideguide">
+            <Link to="/weed-herbicide-guide">
               <li className="">
               Herbicide Guide
               </li>

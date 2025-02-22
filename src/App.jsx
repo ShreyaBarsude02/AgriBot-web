@@ -1,7 +1,9 @@
 import Navbar from "./components/Navbar";
 import HerbicideGuide from "./pages/HerbicideGuide";
+import HerbicideInfo from "./pages/HerbicideInfo";
 import Home from "./pages/Home"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import WeedInfo from "./pages/WeedInfo";
 
 function App() {
   
@@ -20,7 +22,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/herbicideguide" element={<HerbicideGuide />} />
+            <Route path="/weed-herbicide-guide" element={<HerbicideGuide />} />
+            <Route path="/herbicide-info" element={<HerbicideInfo />} />
+            <Route path="/weed-info" element={<WeedInfo />} />
           </Routes>
         </Router>
   )
