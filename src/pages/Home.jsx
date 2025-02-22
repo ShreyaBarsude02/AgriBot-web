@@ -1,6 +1,9 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import backgroundImage from '/bg-hero.png';
+import "@fontsource/dm-sans"; // Default 400 weight
+import "@fontsource/dm-sans/700.css"; // Import specific weights
+
 
 function Home() {
   const features = [
@@ -49,9 +52,11 @@ function Home() {
     <div className="bg-white pt-[10vh] pb-9">
       {/* Hero Section */}
       <div className="h-[30vh] flex flex-col justify-center items-center bg-[#3E7B25] shadow-xl" style={divStyle}>
-        <h1 className="font-black text-3xl pb-3 text-[#123524]">
-          Empowering Indian Farmers with Smart Weed Management
-        </h1>
+      <h1 className="font-black text-3xl pb-3 text-[#123524] font-[DM Sans]">
+  Empowering Indian Farmers with Smart Weed Management
+</h1>
+
+
         <p className="text-[#123524] font-bold tracking-wide italic text-xl">
           <Typewriter
             words={['Throw Away Weeds, Protect Our Fields']}
