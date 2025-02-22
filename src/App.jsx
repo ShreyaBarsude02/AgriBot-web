@@ -4,6 +4,7 @@ import HerbicideInfo from "./pages/HerbicideInfo";
 import Home from "./pages/Home"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import WeedInfo from "./pages/WeedInfo";
+import LivePrices from "./pages/Liveprices";
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
             <Route path="/weed-herbicide-guide" element={<HerbicideGuide />} />
             <Route path="/herbicide-info" element={<HerbicideInfo />} />
             <Route path="/weed-info" element={<WeedInfo />} />
+            <Route path="/liveprices" element={<LivePrices />} />
           </Routes>
         </Router>
   )
