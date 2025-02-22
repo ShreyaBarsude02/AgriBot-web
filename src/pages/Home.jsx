@@ -43,50 +43,28 @@ function Home() {
         </div>
         <div className=" m-9 bg-pink-50 flex justify-center ">
             
-        <div className="grid grid-cols-3 space-x-28 space-y-9">
-            <div className="flex flex-col bg-red-200 w-[20vw]">
-                <div>photo</div>
-                <div className="p-2 flex flex-col justify-center items-center">
-                   <h1 className="font-semibold">AI-Powered Weed Detection Bot</h1> 
-                    <p>Find crop-specific weeds</p>
-                </div>
-            </div>
-            <div className="flex flex-col bg-red-200 w-[20vw]">
-                <div>photo</div>
-                <div className="p-2 flex flex-col justify-center items-center">
-                   <h1 className="font-semibold">Herbicide Guide</h1> 
-                    <p>Get herbicide recommendations</p>
-                </div>
-            </div>
-            <div className="flex flex-col bg-red-200 w-[20vw]">
-                <div>photo</div>
-                <div className="p-2 flex flex-col justify-center items-center">
-                   <h1 className="font-semibold">Government Updates</h1> 
-                    <p>Stay informed on guidelines</p>
-                </div>
-            </div>
-            <div className="flex flex-col bg-red-200 w-[20vw]">
-                <div>photo</div>
-                <div className="p-2 flex flex-col justify-center items-center">
-                   <h1 className="font-semibold">Specific Farm Monitoring</h1> 
-                    <p>Monitor your farm</p>
-                </div>
-            </div>
-            <div className="flex flex-col bg-red-200 w-[20vw]">
-                <div>photo</div>
-                <div className="p-2 flex flex-col justify-center items-center">
-                   <h1 className="font-semibold">Farmer Community</h1> 
-                    <p>Connect & share knowledge</p>
-                </div>
-            </div>
-            <div className="flex flex-col bg-red-200 w-[20vw]">
-                <div>photo</div>
-                <div className="p-2 flex flex-col justify-center items-center">
-                   <h1 className="font-semibold">Weed identification</h1> 
-                    <p>Find crop-specific weeds</p>
-                </div>
-            </div>
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {[
+    { img: "img1.jpg", title: "AI-Powered Weed Detection Bot", desc: "Find crop-specific weeds" },
+    { img: "weedicide.jpg", title: "Herbicide Guide", desc: "Get herbicide recommendations" },
+    { img: "update.png", title: "Government Updates", desc: "Stay informed on guidelines" },
+    { img: "monitoring.png", title: "Specific Farm Monitoring", desc: "Monitor your farm" },
+    { img: "farm-comm.png", title: "Farmer Community", desc: "Connect & share knowledge" },
+    { img: "weed-recomend.jpg", title: "Weed Identification", desc: "Find crop-specific weeds" }
+  ].map((item, index) => (
+    <div key={index} className="flex flex-col bg-green-100 rounded-lg shadow-md overflow-hidden border border-green-300">
+      <div className="w-full h-48">
+        <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+      </div>
+      <div className="p-4 text-center" style={{ backgroundColor: "hsl(88, 100%, 82%)" }}>
+        <h1 className="font-semibold text-lg text-green-900">{item.title}</h1>
+        <p className="text-green-800">{item.desc}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+
         </div>
         
         
