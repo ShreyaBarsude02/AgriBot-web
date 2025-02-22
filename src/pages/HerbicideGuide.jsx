@@ -9,7 +9,7 @@ function HerbicideGuide() {
   const [result, setResult] = useState(null);
 
   const translateToEnglish = async (text) => {
-    const apiKey = "AIzaSyAwxvJpNaC1LPXD2ib5bn57RdYxgrtcV3Q"; // Replace with your actual API key
+    const apiKey = "abc"; // Replace with your actual API key
     const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
     
     const requestBody = {
