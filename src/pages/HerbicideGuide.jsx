@@ -10,13 +10,13 @@ function HerbicideGuide() {
   const navigate = useNavigate();
 
   const crops = [
-    { name: "Wheat", image: "/assets/crops/wheat.jpg" },
-    { name: "Rice", image: "/assets/crops/rice.jpg" },
-    { name: "Cotton", image: "/assets/crops/cotton.jpg" },
-    { name: "Maize", image: "/assets/crops/maize.jpg" },
-    { name: "Soyabean", image: "/assets/crops/soyabean.jpg" },
-    { name: "Sugarcane", image: "/assets/crops/sugarcane.jpg" },
-    { name: "Tea", image: "/assets/crops/tea.jpg" },
+    { name: "Wheat", image: "wheat.png" },
+    { name: "Rice", image: "rice.png" },
+    { name: "Cotton", image: "cotton.png" },
+    { name: "Maize", image: "maize.png" },
+    { name: "Soyabean", image: "soyabean.png" },
+    { name: "Sugarcane", image: "sugarcane.png" },
+    { name: "Tea", image: "tea.png" },
   ];
 
   const translateToEnglish = async (text) => {
@@ -104,7 +104,7 @@ function HerbicideGuide() {
         Click on a crop to see the weeds and herbicides associated with it.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-36 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 mt-8">
         {crops.map((crop) => (
           <div key={crop.name} className="w-72">
             <button
