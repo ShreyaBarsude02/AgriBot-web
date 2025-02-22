@@ -39,7 +39,6 @@ function Navbar() {
           <Link to="/home"><li className="hover:text-yellow-300 transition">Home</li></Link>
           <Link to="/home"><li className="hover:text-yellow-300 transition">WeedObot</li></Link>
           <Link to="/home"><li className="hover:text-yellow-300 transition">My Farm & Bot</li></Link>
-          <Link to="/home"><li className="hover:text-yellow-300 transition">Weed & Crop Info</li></Link>
           <Link to="/weed-herbicide-guide"><li className="hover:text-yellow-300 transition">Herbicide Guide</li></Link>
           <Link to="/home"><li className="hover:text-yellow-300 transition">Govt. Guidelines</li></Link>
           <Link to="/home"><li className="hover:text-yellow-300 transition">Farmer Stories</li></Link>

@@ -46,13 +46,13 @@ function Home() {
   };
 
   return (
-    <div className="bg-green-50 pt-[10vh]">
+    <div className="bg-white pt-[10vh] pb-9">
       {/* Hero Section */}
-      <div className="h-[30vh] flex flex-col justify-center items-center bg-[#3E7B25]" style={divStyle}>
+      <div className="h-[30vh] flex flex-col justify-center items-center bg-[#3E7B25] shadow-xl" style={divStyle}>
         <h1 className="font-black text-3xl pb-3 text-[#123524]">
           Empowering Indian Farmers with Smart Weed Management
         </h1>
-        <p className="text-green-700 font-bold tracking-wide italic text-xl">
+        <p className="text-[#123524] font-bold tracking-wide italic text-xl">
           <Typewriter
             words={['Throw Away Weeds, Protect Our Fields']}
             loop={0}
@@ -65,7 +65,7 @@ function Home() {
       </div>
 
       {/* Introduction Section */}
-      <div className="m-9 bg-green-50 p-9 text-justify rounded-2xl shadow-md">
+      <div className="m-9 bg-white-50 p-9 text-justify rounded-2xl shadow-xl">
         <p className="text-green-800">
           India’s farmers face significant challenges in managing weeds, which
           reduce crop yields and increase labor costs. Many farmers lack
@@ -87,11 +87,11 @@ function Home() {
 
       {/* Features Section */}
       <div className="m-9">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col bg-white rounded-lg shadow-md overflow-hidden border border-green-300"
+              className="flex flex-col bg-white rounded-lg shadow-xl overflow-hidden"
             >
               <div className="w-full h-48">
                 <img
@@ -100,11 +100,11 @@ function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4 text-center bg-green-100">
-                <h1 className="font-semibold text-lg text-green-900">
+              <div className="p-4 text-center bg-[#123524]">
+                <h1 className="font-semibold text-lg text-white">
                   {item.title}
                 </h1>
-                <p className="text-green-800">{item.desc}</p>
+                <p className="text-stone-100">{item.desc}</p>
               </div>
             </div>
           ))}
