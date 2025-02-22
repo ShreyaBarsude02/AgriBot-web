@@ -11,7 +11,7 @@ function WeedTable() {
   );
 
   return (
-    <div className="flex flex-col items-center pt-12 px-4">
+    <div className="flex flex-col items-center pt-20 px-4">
       <h1 className="text-4xl font-bold text-green-700 mb-6">
         {formattedCropName} - Herbicide Guide
       </h1>

@@ -34,22 +34,28 @@ const HerbicideGuide = () => {
         <Sprout size={60} className="mr-2 text-green-700" /> Agritech Herbicide Guide
       </h1>
       <div className="bg-white shadow-lg rounded-lg w-[90vw] mt-9 flex flex-col items-center p-9 border border-gray-300">
-        <div className="flex items-center w-full max-w-lg">
-          <p className="text-gray-700 font-medium">Enter Weed Name:</p>
-          <input
-            type="text"
-            placeholder="Enter weed name"
-            className="mx-3 px-3 py-2 border border-gray-400 rounded-md flex-grow"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center"
-            onClick={handleSearch}
-          >
-            <Search className="mr-2" /> Search
-          </button>
-        </div>
+      <div className="flex items-center w-full max-w-lg flex-col md:flex-row">
+  {/* Label */}
+  <p className="text-gray-700 font-medium text-sm md:text-base mb-2 md:mb-0">
+    Enter Weed Name:
+  </p>
+  {/* Input Field */}
+  <input
+    type="text"
+    placeholder="Enter weed name"
+    className="mx-2 px-3 py-2 border border-gray-400 rounded-md flex-grow w-full md:w-auto"
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+  />
+  {/* Search Button */}
+  <button
+    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center mt-2 md:mt-0 md:ml-2"
+    onClick={handleSearch}
+  >
+    <Search className="mr-2 w-4 h-4" /> 
+    <span className="hidden md:inline">Search</span>
+  </button>
+</div>
         {result && (
           <div className="mt-6 p-4 bg-gray-100 rounded-lg shadow-md w-80 text-center border border-gray-300">
             {typeof result === "string" ? (

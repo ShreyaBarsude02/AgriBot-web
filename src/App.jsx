@@ -8,6 +8,8 @@ import LivePrices from "./pages/Liveprices";
 import Notification from "./pages/Notification";
 import WeedTable from "./components/WeedTable";
 import { useEffect } from "react";
+import Hardware from "./pages/Hardware";
+import Monitoring from "./pages/Monitoring";
 
 function App() {
   useEffect(() => {
@@ -41,8 +43,10 @@ function App() {
         <Route path="/weed-herbicide-guide/herbicide-info" element={<HerbicideInfo />} />
         <Route path="/weed-herbicide-guide/weed-info" element={<WeedInfo />} />
         <Route path="/liveprices" element={<LivePrices />} />
+        <Route path="/hardware" element={<Hardware />} />
         <Route path="/govt-notification" element={<Notification />} />
         <Route path="/crop/:cropName" element={<WeedTable />} />
+        <Route path="/Monitoring" element={<Monitoring />} />
       </Routes>
     </Router>
   );
