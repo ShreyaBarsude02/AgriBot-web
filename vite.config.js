@@ -16,5 +16,8 @@ export default defineConfig({
 				target: "https://www.oceanoex.com",
 			},
 		},
+
+  build: {
+    outDir: 'dist',
   },
 }})
