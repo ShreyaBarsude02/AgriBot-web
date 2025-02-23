@@ -13,7 +13,7 @@ export default defineConfig({
     port: 5173, // You can change the port if needed
     proxy: {
 			"/": {
-				target: "https://www.shreyatechforge.com",
+				target: "https://www.agritech.oceanoex.com",
 			},
 		},
   },
