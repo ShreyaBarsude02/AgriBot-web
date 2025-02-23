@@ -8,12 +8,7 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
-  server: {
-   
-    proxy: {
-			"/agritech": {
-				target: "https://www.oceanoex.com",
-			},
-		},
+  build: {
+    outDir: 'dist',
   },
 })
