@@ -9,7 +9,8 @@ export default defineConfig({
     react()
   ],
   server: {
-   
+    host: true, // Enables access over the network
+    port: 5173, // You can change the port if needed
     proxy: {
 			"/agritech": {
 				target: "https://www.oceanoex.com",

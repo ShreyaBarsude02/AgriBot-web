@@ -29,12 +29,12 @@ const HerbicideGuide = () => {
   };
 
   return (
-    <div className="pt-[10vh] flex flex-col items-center justify-center bg-green-100 min-h-screen">
+    <div className="pt-[10vh] flex flex-col items-center justify-center min-h-screen">
       <h1 className="mt-9 font-black text-4xl flex items-center">
         <Sprout size={60} className="mr-2 text-green-700" /> Agritech Herbicide Guide
       </h1>
       <div className="bg-white shadow-lg rounded-lg w-[90vw] mt-9 flex flex-col items-center p-9 border border-gray-300">
-      <div className="flex items-center w-full max-w-lg flex-col md:flex-row">
+      <div className="flex items-center justify-center w-full max-w-lg flex-col md:flex-row">
   {/* Label */}
   <p className="text-gray-700 font-medium text-sm md:text-base mb-2 md:mb-0">
     Enter Weed Name:

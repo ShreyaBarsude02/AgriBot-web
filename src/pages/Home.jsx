@@ -30,7 +30,7 @@ function Home() {
       img: "weedicide.jpg",
       title: "Herbicide Guide",
       desc: "Get herbicide recommendations",
-      link: "/herbicide-guide",
+      link: "/weed-herbicide-guide",
     },
     {
       img: "update.png",
@@ -42,8 +42,7 @@ function Home() {
       img: "monitoring.png",
       title: "Specific Farm Monitoring",
       desc: "Monitor your farm",
-      link: "https://example.com/farm-monitoring",
-      external: true, // Mark external links
+      link: "Monitoring",
     },
     {
       img: "farm-comm.png",

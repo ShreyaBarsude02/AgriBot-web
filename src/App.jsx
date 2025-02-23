@@ -47,6 +47,7 @@ function App() {
         <Route path="/govt-notification" element={<Notification />} />
         <Route path="/crop/:cropName" element={<WeedTable />} />
         <Route path="/Monitoring" element={<Monitoring />} />
+        <Route path="/home/Monitoring" element={<Monitoring />} />
       </Routes>
     </Router>
   );
